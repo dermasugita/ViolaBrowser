@@ -22,7 +22,7 @@ jobs:
     - name: Run cargo test
       run: cargo test
     - name: Coverage
-      if: ${{matrix.os == ubuntu-latest}}
+      if: ${{matrix.os == 'ubuntu-latest'}}
       run: cargo install cargo-kcov
       
       
