@@ -17,7 +17,7 @@ jobs:
       uses: actions-rs/toolchain@v1
       with:
         toolchain: stable
-        components: clippy, cargo-kcov
+        components: clippy
     - name: Run cargo test
       uses: actions-rs/cargo@v1
       with:
