@@ -1,0 +1,26 @@
+name: ci
+on:
+  push:
+    branches: [main, 'feature/**']
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    name: unit-test
+    runs-on: ${{matrix.os}}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    steps:
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        components: clippy, cargo-kcov
+    - name: Run cargo test
+      uses: actions-rs/cargo@v1
+      with:
+        command: test
+      
+      
