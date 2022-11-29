@@ -20,7 +20,7 @@ jobs:
         toolchain: stable
         components: clippy
     - name: Run clippy lint
-      uses: actions-rs/clippy_check@v1
+      uses: actions-rs/clippy-check@v1
       with:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --all-features
