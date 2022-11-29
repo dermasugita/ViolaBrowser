@@ -19,6 +19,11 @@ jobs:
       with:
         toolchain: stable
         components: clippy
+    - name: Run clippy lint
+      uses: actions-rs/clippy_check@v1
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          args: --all-features
     - name: Run cargo test
       run: cargo test
     - name: Run tarpaulin
