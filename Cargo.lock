@@ -7,6 +7,7 @@ name = "bedpetools"
 version = "0.1.0"
 dependencies = [
  "clap",
+ "coitrees",
 ]
 
 [[package]]
@@ -57,6 +58,12 @@ checksum = "0d4198f73e42b4936b35b5bb248d81d2b595ecb170da0bac7655c54eedfa8da8"
 dependencies = [
  "os_str_bytes",
 ]
+
+[[package]]
+name = "coitrees"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6eb4c41337c234542964ca3b130baafcad03f2e931d7843902750b60515e5ed0"
 
 [[package]]
 name = "errno"
